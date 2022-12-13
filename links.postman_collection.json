@@ -1,0 +1,372 @@
+{
+	"info": {
+		"_postman_id": "b5051293-d196-457e-99d9-5317dbaca691",
+		"name": "links",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"user1\",\r\n    \"password\" : \"qwerty\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/auth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"nik\",\r\n    \"password\" : \"rai\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/reg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"reg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\":\"lozka\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getLink",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAuthLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MTc5NSwianRpIjoiNGQ0NDNkNmUtZWRmZi00MzMwLTkyZDYtNWRkNjU1NTlkYmNkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIxIiwibmJmIjoxNjcwOTUxNzk1LCJleHAiOjE2NzA5NTI2OTV9.faxHR-6VhmE6LaRdzP-Gjx8XU5Z4p6LJ0heSAUhaTA4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\":\"lozka\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getAuthLink",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getAuthLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MDk2MywianRpIjoiN2NlY2ZmMWEtOThlZi00MGRjLWFlOWYtNjJlYzU1OTg0NDExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im5payIsIm5iZiI6MTY3MDk1MDk2MywiZXhwIjoxNjcwOTUxODYzfQ.5Tx7zfYOcEZkaWXtZh_oTGt0LJ_cAjv4498uvUU5zhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"link\" : \"https://vk.com/lozka_kofe\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/createLink",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"createLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllLinks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MDk2MywianRpIjoiN2NlY2ZmMWEtOThlZi00MGRjLWFlOWYtNjJlYzU1OTg0NDExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im5payIsIm5iZiI6MTY3MDk1MDk2MywiZXhwIjoxNjcwOTUxODYzfQ.5Tx7zfYOcEZkaWXtZh_oTGt0LJ_cAjv4498uvUU5zhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getAllLinks",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getAllLinks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeNickLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MDk2MywianRpIjoiN2NlY2ZmMWEtOThlZi00MGRjLWFlOWYtNjJlYzU1OTg0NDExIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im5payIsIm5iZiI6MTY3MDk1MDk2MywiZXhwIjoxNjcwOTUxODYzfQ.5Tx7zfYOcEZkaWXtZh_oTGt0LJ_cAjv4498uvUU5zhY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"new_nick\" : \"lozka\",\r\n    \"old_nick\" : \"2bf56bcd4b29\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/changeNick",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"changeNick"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changePrivacyLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MTM5OSwianRpIjoiMzAzOGU3ZmYtYjk0OS00ODhhLWEyNDQtNjgzNGQyNDhjOWU5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im5payIsIm5iZiI6MTY3MDk1MTM5OSwiZXhwIjoxNjcwOTUyMjk5fQ.1V0_y90A0BwByr3Vz_v9sHo3mupRXyDebUcQt-a-UFU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\" : \"lozka\",\r\n    \"privacy\": 3\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/changePrivacy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"changePrivacy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delLink",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDk1MTc5NSwianRpIjoiNGQ0NDNkNmUtZWRmZi00MzMwLTkyZDYtNWRkNjU1NTlkYmNkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InVzZXIxIiwibmJmIjoxNjcwOTUxNzk1LCJleHAiOjE2NzA5NTI2OTV9.faxHR-6VhmE6LaRdzP-Gjx8XU5Z4p6LJ0heSAUhaTA4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nick\":\"tatto\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/delLink",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"delLink"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
